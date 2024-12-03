@@ -82,11 +82,9 @@ This endpoint fetches address information from the Canada Post API based on a pr
 **Request**:
     Query Parameters 
 
-    | Parameter | Type   | Description                                                | Required |
-    |-----------|--------|------------------------------------------------------------|----------|
-
-    | Zip       | string | The Canadian postal code to look up. Must be in the format `A1A 1A1`. | Yes      |
-
+| Parameter | Type   | Description                                                | Required |
+|-----------|--------|------------------------------------------------------------|----------|
+| Zip       | string | The Canadian postal code to look up. Must be in the format `A1A 1A1`. | Yes      |
 
 
     Example Request:
