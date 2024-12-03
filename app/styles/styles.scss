@@ -1,0 +1,28 @@
+.input_Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 90vh;
+
+    .input_Wrapper {
+        display: flex;
+
+        .input_Input {
+            margin-right: .625rem;
+        }
+
+        .input_Button {
+            width: 2.8125rem;
+            height: 1.5625rem;
+            background-color: #272727;
+            border-color: black;
+            margin-right: .625rem;
+            color: white;
+        }
+    }
+
+    .information_Wrapper {
+        display: flex;
+    }
+}
