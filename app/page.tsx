@@ -1,16 +1,22 @@
 'use client';
-import { useState } from 'react';
+import { useState, ChangeEvent, KeyboardEvent } from 'react';
 import '../app/styles/styles.scss';
 
-function Index() {
-  const [zipCode, setZipCode] = useState('');
-  const [address, setAddress] = useState(null);
-  const [error, setError] = useState('');
+interface Address {
+  Description: string;
+}
 
+function Index() {
+  const [zipCode, setZipCode] = useState<string>('');
+  const [address, setAddress] = useState<Address | null>(null);
+  const [error, setError] = useState<string>('');
+
+  // Gets address info from inputted postal code.
   const handleFetchAddress = async () => {
     setError('');
     setAddress(null);
 
+    // Validates the postal code format (Canada: A1A 1A1)
     if (!/^[A-Za-z]\d[A-Za-z] ?\d[A-Za-z]\d$/.test(zipCode)) {
       setError('Please enter a valid postal code (e.g., V3V 4X7).');
       return;
@@ -31,10 +37,15 @@ function Index() {
   };
 
   // Function to make Enter key work as an alternative to the button.
-  const handleKeyDown = (event) => {
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       handleFetchAddress();
     }
+  };
+
+  // Function that handles the input change.
+  const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setZipCode(event.target.value);
   };
 
   return (
@@ -44,7 +55,7 @@ function Index() {
           className="input_Input"
           placeholder="Postal Code"
           value={zipCode}
-          onChange={(e) => setZipCode(e.target.value)}
+          onChange={handleInputChange}
           onKeyDown={handleKeyDown}
         />
         <button
