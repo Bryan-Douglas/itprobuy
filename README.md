@@ -75,10 +75,9 @@ Follow these steps to set up and run the application locally:
 ## API Documentation
 
 ### **Endpoint**:
-    ```bash
     GET /api/address
 
-    This endpoint fetches address information from the Canada Post API based on a provided Canadian postal code.
+This endpoint fetches address information from the Canada Post API based on a provided Canadian postal code.
 
 **Request**:
     Query Parameters 
