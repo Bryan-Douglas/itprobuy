@@ -30,12 +30,14 @@ Follow these steps to set up and run the application locally:
 
 
 2. **Install dependencies**:
+    ```bash
     npm i Next React React-Dom Sass
 
 3. **Set up environment variables**:
     Create a .env.local file in the root directory and add the Canada Post API key that will be provided.
 
 4. **Run the development server**:
+    ```bash
     npm run dev
 
 5. **Open the application**:
