@@ -31,10 +31,10 @@ Follow these steps to set up and run the application locally:
 
 2. **Install dependencies**:
     ```bash
-    npm i Next React React-Dom Sass
+    npm install Next React React-Dom Sass
 
 3. **Set up environment variables**:
-    Create a .env.local file in the root directory and add the Canada Post API key that will be provided by adding it to the file.
+    Create a .env.local file in the root directory and add the Canada Post API key:
     ```bash
     CANADA_POST_API_KEY=PROVIDED_KEY
 
@@ -52,7 +52,7 @@ Follow these steps to set up and run the application locally:
 
 ![input with a valid Canadian Postal Code](public/Postal_Locator.PNG)
 
-2) Hit 'Enter' on the keyboard or click the 'Enter' button beside the input field to see the results from the Canada Post API.
+2) Submit the postal code by either hitting the Enter key or clicking the Enter button next to the input field. The address details will be displayed.
 
 ![Address information being shown from the result searched in the input](public/Postal_Locator_Results.PNG)
 
@@ -67,7 +67,6 @@ Follow these steps to set up and run the application locally:
 
 **Technologies Used**:
 
-   - Next.js – Framework for building server-side rendered React applications.
    - Next.js – Framework for building server-side rendered React applications.
    - React – JavaScript library for building user interfaces.
    - TypeScript – Typed JavaScript for safer code.
