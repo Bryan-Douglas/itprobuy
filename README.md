@@ -74,7 +74,7 @@ Follow these steps to set up and run the application locally:
 
 ## API Documentation
 
-**Endpoint**:
+### **Endpoint**:
     ```bash
     GET /api/address
 
@@ -98,7 +98,7 @@ Follow these steps to set up and run the application locally:
     Returns the address details for the given postal code.
 
     Example JSON Response:  
-    ```bash
+    ```json
           {
   "Id": "12345",
   "Text": "123 Main St",
@@ -121,9 +121,9 @@ Follow these steps to set up and run the application locally:
     | 400 | ZIP code is required. |
     | 404 | No address found for the provided postal code. |
     | 500  | Failed to fetch data from Canada Post. |
-    
+
     Example Error Response (400 Bad Request):
-    ```bash
+    ```json
     {
   "error": "ZIP code is required."
 }
