@@ -78,14 +78,13 @@ Follow these steps to set up and run the application locally:
     ```bash
     GET /api/address
 
-**Description**:
     This endpoint fetches address information from the Canada Post API based on a provided Canadian postal code.
 
 **Request**:
     Query Parameters 
 
     | Parameter | Type | Description | Required |
-    |-------------|-------------|-------------|-------------|
+    | ------------- | ------------- | ------------- | ------------- |
     | Zip | string | The Canadian postal code to look up. Must be in the format A1A 1A1. | Yes | 
 
     Example Request:
@@ -108,7 +107,7 @@ Follow these steps to set up and run the application locally:
 }
 
     | Field | Type | Description |
-    |-------------|-------------|-------------|
+    | ------------- | ------------- | ------------- |
     | id | string | Unique identifier of the address. |
     | Text | string | The display text for the address. |
     | Highlight | string | Highlighted address text. |
@@ -117,7 +116,7 @@ Follow these steps to set up and run the application locally:
 
     Error Responses
     | Status Code | Description |
-    |-------------|-------------|
+    | ------------- | ------------- |
     | 400 | ZIP code is required. |
     | 404 | No address found for the provided postal code. |
     | 500  | Failed to fetch data from Canada Post. |
