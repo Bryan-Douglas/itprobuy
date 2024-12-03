@@ -80,7 +80,7 @@ Follow these steps to set up and run the application locally:
 This endpoint fetches address information from the Canada Post API based on a provided Canadian postal code.
 
 ## **Request**:
-    Query Parameters 
+Query Parameters 
 
 | Parameter | Type   | Description                                                | Required |
 |-----------|--------|------------------------------------------------------------|----------|
@@ -91,10 +91,10 @@ This endpoint fetches address information from the Canada Post API based on a pr
     GET http://localhost:3000/api/address?zip=V3V4X7
 
 ## **Response**:
-    Success Response (200 OK)
-    Returns the address details for the given postal code.
-    Example JSON Response:  
-    ```json
+Success Response (200 OK)
+Returns the address details for the given postal code.
+Example JSON Response:  
+```json
           {
   "Id": "12345",
   "Text": "123 Main St",
@@ -118,8 +118,8 @@ This endpoint fetches address information from the Canada Post API based on a pr
 | 404 | No address found for the provided postal code. |
 | 500  | Failed to fetch data from Canada Post. |
 
-    Example Error Response (400 Bad Request):
-    ```json
+Example Error Response (400 Bad Request):
+```json
     {
   "error": "ZIP code is required."
 }
