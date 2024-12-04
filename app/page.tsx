@@ -24,7 +24,7 @@ function Index() {
 
     try {
       const response = await fetch(`/api/address?zip=${zipCode}`);
-      const data = await response.json();
+      const data: Address = await response.json();
 
       if (response.ok) {
         setAddress(data);
